@@ -1,5 +1,9 @@
-body {
+html, body {
     height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 14px;
@@ -49,6 +53,10 @@ footer {
     height: 65px;
     background-color: #666666;
     border-top: 6px #4aaaa5 solid;
+    flex-shrink: 0;
+}
+.wrap {
+  flex: 1 0 auto;
 }
 h2 {
     float: left;
@@ -69,10 +77,20 @@ ul, li {
     display: inline-block;
     margin-top: 20px;
 }
-a {
-    text-decoration: none;
+/* unvisited link */
+a:link {
     color: #777777;
-    
+    text-decoration: none;
+}
+/* visited link */
+a:visited {
+    color: #777777;
+    text-decoration: none;
+}
+/* mouse over link */
+a:hover {
+    color: #4aaaa5;
+    text-decoration: none;
 }
 .divider-space {
     padding-right: 10px;
@@ -83,4 +101,46 @@ a {
     padding-top: 40px;
     font-size: 10px;
     color: #ffffff;
+}
+.clearfix {
+    overflow: auto;
+}
+/* Portfolio Images & Banner */
+
+.image-container {
+    margin-right: 40px;
+    margin-bottom: 55px;
+    width: 274px;
+    height: 206px;
+    float: left;
+    background-size: cover;
+    position: relative;
+}
+.ban-text {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    bottom: 10px;
+    left: 0px;
+    background: #4aaaa5;
+    color: white;
+    font: 22px 'Georgia', Times, Times New Roman, serif;
+    text-align: center;
+    padding-top: 15px;
+}
+.image1 {
+    background: url(../images/business-q-c-274-206-7.jpg);
+}
+.image2 {
+    background: url(../images/technics-q-c-274-206-2.jpg);
+}
+.image3 {
+    background: url(../images/technics-q-c-274-206-3.jpg);
+}
+.image4 {
+    background: url(../images/technics-q-c-274-206-5.jpg);
+}
+.image5 {
+    background: url(../images/technics-q-c-274-206-9.jpg);
 }
